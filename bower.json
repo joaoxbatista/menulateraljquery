@@ -1,0 +1,28 @@
+{
+  "name": "Admirada",
+  "authors": [
+    "João Baitsta Gomes Silva <jhonxbatista@gmail.com>"
+  ],
+  "description": "Hotsite Admirada",
+  "main": "index.html",
+  "keywords": [
+    "Admirada",
+    "Thr3ap"
+  ],
+  "license": "MIT",
+  "homepage": "admirada.thr3ap.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "animate.css": "^3.5.2"
+  },
+  "devDependencies": {
+    "bootstrap-sass": "boostrap-sass#^3.3.7"
+  }
+}

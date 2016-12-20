@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Template Project</title>
+	<link rel="stylesheet" href="css/autoload.css">
+	<link rel="stylesheet" href="css/menu.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="bower_components/animate.css/animate.min.css">
+</head>
+<body>
+
+
+	<span id="btn-menu">Menu</span>
+	<div id="menu-lateral">
+		<span id="btn-fechar">X</span>
+		<nav id="content-menu">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Settings</a></li>
+				<li><a href="#">Log-out</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div id="content">
+		<div id="about">
+			
+			<div class="col-md-6">
+				<h1>Some title</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<a href="">Button link</a>
+			</div>
+
+			<div class="col-md-6">
+				<h1>Some title here</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<a href="">Button link</a>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var btn_menu = $('#btn-menu');
+			var menu = $('#menu-lateral');
+			var btn_fechar = $('#btn-fechar');
+			var content = $('#content');
+
+			btn_menu.click(function(){
+				menu.fadeIn('slow');
+				btn_menu.fadeOut('slow');
+				content.addClass('wraper')
+			});
+
+			btn_fechar.click(function(){
+				btn_menu.fadeIn('slow');
+				menu.fadeOut('slow');
+				content.removeClass('wraper')
+			});
+		});
+	</script>
+</body>
+</html>
