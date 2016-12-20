@@ -1,0 +1,123 @@
+@import 'variables/colors'
+@import 'variables/sizes'
+
+body
+	background: $gray
+	color: $gray2
+	width: 100%
+	font-family: 'Open Sans'
+
+.wraper
+	width: 100% !important
+	@media screen and(min-width: $tablets)
+		width: 80% !important
+		float: right
+
+#btn-menu
+		display: block
+		background: $white
+		color: $gray3
+		height: 55px
+		width: 55px
+		padding: 15px 0px
+		text-align: center
+		border: 2px solid $gray1
+		border-radius: 50%
+		text-transform: uppercase
+		transition: all .4s
+		margin: 0 auto
+		margin-top: 20px
+		// @media screen and(min-width: $tablets)
+		// @media screen and(min-width: $desktops)
+				
+
+		&:hover, &:active, &:focus
+			background: $gray3
+			color: $white
+			border-color: $gray2
+			cursor: pointer
+
+#menu-lateral
+	position: relative
+	display: block
+	width: 100%
+	float: none
+	display: none
+	border-right: 1px solid $gray1
+	background: $gray
+
+	@media screen and(min-width: $tablets)
+		position: fixed
+		height: 100vh
+		width: 20%
+		float: left	
+
+	// @media screen and(min-width: $desktops)
+	
+
+	
+	#btn-fechar
+		display: block
+		height: 55px
+		width: 55px
+		padding: 15px 0px
+		color: $gray3
+		background: $white
+		text-align: center
+		border: 1px solid $gray3
+		border-radius: 50%
+		text-transform: uppercase
+		margin: 0 auto
+		transition: all .4s
+		margin-top: 20px
+		&:hover, &:active, &:focus
+			background: $gray3
+			color: $white
+			border-color: $gray2
+			cursor: pointer
+
+	#content-menu
+		ul
+			padding-top: 20px
+			list-style: none
+			padding-left: 0px
+			li
+				display: block
+				text-align: center
+				a
+					text-decoration: none
+					text-transform: uppercase
+					color: $gray2
+					width: 100%
+					display: block
+					padding: 10px 0px
+					position: relative
+
+					&:hover
+						&::after
+							content: ''
+							display: block
+							width: 50%
+							left: 25%
+							height: 2px
+							bottom: 0px
+							position: absolute
+							background: $gray3
+							transition: width .5s
+
+					&::after
+						content: ''
+						display: block
+						width: 0%
+						transition: width .5s
+						left: 25%
+						height: 2px
+						bottom: 0px
+						position: absolute
+						background: $gray3
+
+#content
+	float: right
+	width: 100%
+	padding: 20px
+	margin-top: 50px
